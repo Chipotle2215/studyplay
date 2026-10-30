@@ -710,6 +710,13 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-
 .remove-video-button:hover { color: var(--ink); text-decoration: underline; }
 .video-empty-state { margin: 0; }
 .video-empty-state[hidden] { display: none; }
+.apple-music-library { padding-top: 8px; }
+.apple-music-description, .apple-music-credit { max-width: 760px; color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+.apple-music-description { margin: 16px 0; }
+.apple-music-search { display: flex; max-width: 680px; gap: 10px; }
+.apple-music-search input { flex: 1; min-width: 0; min-height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); color: var(--ink); font: inherit; }
+.apple-music-search input:focus-visible { outline: 2px solid var(--forest-light); outline-offset: 2px; }
+.apple-music-credit { margin: 12px 0 0; font-size: 0.76rem; }
 
 @media (max-width: 680px) {
   .site-header { width: calc(100% - 32px); height: 66px; }
@@ -734,6 +741,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-
   .video-library-tools { align-items: stretch; flex-direction: column; }
   .choose-videos-button { width: 100%; }
   .youtube-form-row { align-items: stretch; flex-direction: column; }
+  .apple-music-search { align-items: stretch; flex-direction: column; }
   .video-grid { grid-template-columns: 1fr; }
   .game-art { height: 205px; }
   .about-strip { margin-top: 39px; }

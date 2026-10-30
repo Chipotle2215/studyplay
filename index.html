@@ -19,6 +19,7 @@
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a class="nav-current" href="#videos">Videos</a>
+        <a href="#apple-music">Music</a>
         <a href="#games">Games</a>
         <a href="#about">About &amp; privacy</a>
       </nav>
@@ -72,6 +73,22 @@
         </div>
         <div class="video-grid" id="videoGrid" aria-live="polite"></div>
         <p class="empty-state video-empty-state" id="videoEmptyState">Choose a video file from your device or add a YouTube link. Local files are not uploaded or saved by this page.</p>
+      </section>
+
+      <section class="library apple-music-library" id="apple-music" aria-labelledby="apple-music-title">
+        <div class="library-heading">
+          <div>
+            <p class="section-label">Search Apple’s catalog</p>
+            <h2 id="apple-music-title">Find a song</h2>
+          </div>
+        </div>
+        <p class="apple-music-description">Search by song, artist, or album. Results and playback open on Apple Music; full-length listening depends on availability and Apple Music membership.</p>
+        <form class="apple-music-search" action="https://music.apple.com/search" method="get" target="_blank" rel="noopener noreferrer">
+          <label class="visually-hidden" for="appleMusicQuery">Search Apple Music by song, artist, or album</label>
+          <input id="appleMusicQuery" name="term" type="search" maxlength="200" placeholder="Song, artist, or album" required />
+          <button class="choose-videos-button" type="submit">Search Apple Music</button>
+        </form>
+        <p class="apple-music-credit">Apple and Apple Music are trademarks of Apple Inc. StudyPlay is independent and not affiliated with Apple. Credit is not permission to copy or redistribute music; playback is provided by Apple Music.</p>
       </section>
 
       <section class="library" id="games" aria-labelledby="library-title">
