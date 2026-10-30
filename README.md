@@ -1,8 +1,10 @@
 # StudyPlay
 
-A clearly branded educational page with full-length local video playback and two original, locally authored games: Star Orchard (science and observation) and Tile Tangle (patterns and spatial reasoning). Their artwork and gameplay are created in the project using CSS and canvas; the page does not load external game embeds, images, or scripts.
+A clearly branded educational page with local video playback, YouTube embeds, and two original, locally authored games: Star Orchard (science and observation) and Tile Tangle (patterns and spatial reasoning). Their artwork and gameplay are created in the project using CSS and canvas.
 
 Choose video files from your device to play their full duration using the browser's native controls, including seeking and fullscreen. Files are not uploaded or saved by the page and are removed from the library when the page is closed. Playback depends on browser codec support; MP4 and WebM are commonly supported. Only choose videos you own or are authorized to use.
+
+Paste a YouTube video URL to add it to the library. It is loaded from YouTube only when you choose to play it, using YouTube's privacy-enhanced embed host. The video owner may disable embedding, and YouTube availability, terms, and network restrictions apply. Only add videos you are authorized to watch.
 
 The games are original and locally hosted. There is no sign-in, tracking, proxy, or URL obfuscation. This project does not bypass network or school access controls; follow the rules of the network where it is used.
 

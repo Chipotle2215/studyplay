@@ -686,9 +686,17 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-
 .video-library-tools p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 .choose-videos-button { flex: 0 0 auto; display: inline-flex; min-height: 42px; align-items: center; justify-content: center; padding: 0 17px; border-radius: 4px; background: var(--forest); color: white; cursor: pointer; font-size: 0.86rem; font-weight: 800; }
 .choose-videos-button:hover { background: var(--forest-light); }
+.youtube-form { margin: 0 0 22px; }
+.youtube-form > label { display: block; margin-bottom: 8px; color: var(--ink); font-size: 0.86rem; font-weight: 800; }
+.youtube-form-row { display: flex; gap: 10px; }
+.youtube-form-row input { flex: 1; min-width: 0; min-height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); color: var(--ink); font: inherit; }
+.youtube-form-row input:focus-visible { outline: 2px solid var(--forest-light); outline-offset: 2px; }
+.youtube-status { margin: 8px 0 0; color: var(--muted); }
 .video-player-panel { margin: 0 0 22px; padding: 18px; border-radius: 6px; background: var(--forest); color: white; }
 .video-player-panel h3 { margin: 0 0 12px; overflow-wrap: anywhere; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; font-weight: 500; }
-.video-player-panel video { display: block; width: 100%; max-height: min(68vh, 720px); aspect-ratio: 16 / 9; background: #101714; }
+.video-player-panel video, .youtube-player-container { display: block; width: 100%; max-height: min(68vh, 720px); aspect-ratio: 16 / 9; background: #101714; }
+.youtube-player-container iframe { display: block; width: 100%; height: 100%; border: 0; }
+.video-player-panel [hidden], .youtube-player-container[hidden] { display: none; }
 .video-status { margin: 11px 0 0; color: #d4e5dc; font-size: 0.82rem; line-height: 1.5; }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }
 .video-card { min-width: 0; display: grid; grid-template-columns: 108px minmax(0, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--white); }
@@ -725,6 +733,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-
   .game-grid { grid-template-columns: 1fr; }
   .video-library-tools { align-items: stretch; flex-direction: column; }
   .choose-videos-button { width: 100%; }
+  .youtube-form-row { align-items: stretch; flex-direction: column; }
   .video-grid { grid-template-columns: 1fr; }
   .game-art { height: 205px; }
   .about-strip { margin-top: 39px; }

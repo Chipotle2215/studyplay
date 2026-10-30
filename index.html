@@ -44,25 +44,34 @@
       <section class="library video-library" id="videos" aria-labelledby="video-library-title">
         <div class="library-heading">
           <div>
-            <p class="section-label">Your device · Nothing uploaded</p>
-            <h2 id="video-library-title">Full-length videos</h2>
+            <p class="section-label">Local files and YouTube links</p>
+            <h2 id="video-library-title">Video library</h2>
           </div>
           <span class="game-count" id="videoCount">0 videos</span>
         </div>
         <div class="video-library-tools">
-          <p>Choose videos you own or are authorized to watch. Playback stays in this browser.</p>
+          <p>Local files stay in your browser. YouTube videos play in YouTube’s official embed player.</p>
           <label class="choose-videos-button" for="videoFiles">Choose videos</label>
           <input class="visually-hidden" id="videoFiles" type="file" accept="video/*" multiple />
         </div>
+        <form class="youtube-form" id="youtubeForm">
+          <label for="youtubeUrl">Add a YouTube video link</label>
+          <div class="youtube-form-row">
+            <input id="youtubeUrl" name="youtubeUrl" type="url" placeholder="https://www.youtube.com/watch?v=…" autocomplete="url" required />
+            <button class="choose-videos-button" type="submit">Add YouTube video</button>
+          </div>
+          <p class="video-status youtube-status" id="youtubeStatus" role="status" aria-live="polite">Use a video link you’re authorized to watch. Some videos can’t be embedded; their creator’s settings and YouTube availability apply.</p>
+        </form>
         <div class="video-player-panel" id="videoPlayerPanel" hidden>
           <h3 id="activeVideoTitle"></h3>
           <video id="videoPlayer" controls playsinline preload="metadata">
             Your browser does not support HTML video playback.
           </video>
+          <div class="youtube-player-container" id="youtubePlayerContainer" hidden></div>
           <p class="video-status" id="videoStatus" role="status" aria-live="polite"></p>
         </div>
         <div class="video-grid" id="videoGrid" aria-live="polite"></div>
-        <p class="empty-state video-empty-state" id="videoEmptyState">Choose a video file from your device to get started. Your files are not uploaded or saved by this page.</p>
+        <p class="empty-state video-empty-state" id="videoEmptyState">Choose a video file from your device or add a YouTube link. Local files are not uploaded or saved by this page.</p>
       </section>
 
       <section class="library" id="games" aria-labelledby="library-title">
