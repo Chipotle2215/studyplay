@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#25394a" />
+    <meta name="description" content="Practice patterns and spatial reasoning with the StudyPlay Tile Tangle puzzle." />
+    <title>Tile Tangle | StudyPlay</title>
+    <link rel="stylesheet" href="tile-tangle.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back-link" href="index.html#games"><span aria-hidden="true">←</span> All games</a>
+      <span class="edition-label">STUDYPLAY · MATH &amp; LOGIC</span>
+    </header>
+
+    <main class="game-page" id="gamePage">
+      <section class="game-heading">
+        <div>
+          <p class="eyebrow">Patterns &amp; spatial reasoning</p>
+          <h1>Tile Tangle</h1>
+          <p class="lede">Place a shape. Link four matching tiles. Keep the pattern going.</p>
+        </div>
+        <div class="score-block" aria-live="polite">
+          <span>Score</span>
+          <strong id="scoreValue">0</strong>
+        </div>
+      </section>
+
+      <section class="play-layout" aria-label="Tile Tangle game">
+        <div class="board-frame" id="boardFrame">
+          <canvas id="board" width="576" height="576" tabindex="0" aria-label="Puzzle board. Choose a shape below and select a board square to place it. Use arrow keys to move the placement cursor and Enter to place."></canvas>
+          <div class="loading-message" id="loadingMessage" role="status" aria-live="polite">Preparing the garden…</div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="panel-topline">
+            <h2>Your shapes</h2>
+            <button class="quiet-button" id="resetButton" type="button">New run</button>
+          </div>
+          <p class="instruction">Select a shape, then tap a board square to place it. Groups of four or more matching colors clear together.</p>
+          <div class="piece-tray" id="pieceTray" role="group" aria-label="Choose a shape"></div>
+          <div class="rule-note">
+            <span class="rule-icon" aria-hidden="true">∞</span>
+            <p><strong>Endless practice</strong><br />When no current shape fits, the board refreshes and your score carries on.</p>
+          </div>
+          <p class="status-line" id="statusLine" role="status" aria-live="polite">Loading original game…</p>
+        </aside>
+      </section>
+
+      <div class="bottom-actions">
+        <span>Keyboard: arrows to aim, Enter to place</span>
+        <button class="fullscreen-button" id="fullscreenButton" type="button" aria-label="Enter fullscreen">⛶ Fullscreen</button>
+      </div>
+    </main>
+
+    <script src="tile-tangle.js"></script>
+  </body>
+</html>
